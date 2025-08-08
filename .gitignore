@@ -31,4 +31,5 @@
 ### Start of Added by Farhan
 *.com
 **/build/
+**/.vscode/
 ### End of Added by Farhan
