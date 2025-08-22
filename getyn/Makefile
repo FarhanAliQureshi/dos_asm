@@ -2,7 +2,7 @@
 # This Makefile is written for DOS commands. If you are using any other
 # operating system then use its commands (for example: mkdir, del, etc).
 
-PROJECT = getyn
+PROJECT = GETYN
 OUTPUT_DIR = BUILD
 SOURCE_DIR = SRC
 OUTPUT_FILE = $(OUTPUT_DIR)/$(PROJECT).COM
