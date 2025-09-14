@@ -23,22 +23,34 @@ Turbo Assembler (TASM) is no longer in active development. Microsoft Macro Assem
 
 My requirements were a FOSS project with active development, which can also output 16-bit x86 real-mode flat binary executable files (.COM files). NASM fits the bill perfectly.
 
+## Build Instructions
+* Install [FreeDOS](https://freedos.org) or [DOSBox](https://www.dosbox.com)
+* Install [NASM](https://www.nasm.us)
+* Install [GNU Make (DJGPP)](https://www.delorie.com/djgpp) (Optional but recommended)
+* Install [GNU Debugger (DJGPP)](https://www.delorie.com/djgpp) (Optional but recommended)
+* Clone this repository
+* Change directory into any project, for example `CD dos_asm\hello`, then run: `make`
+
+> [!TIP]
+> I recommend using FreeDOS or DOSBox. However, you can also use MS-DOS 5.0 or MS-DOS 6.22 (or later), though I didn't test it.
+
 ## Build Tools
 * **NASM:** 
-Download NASM from [https://www.nasm.us/](https://www.nasm.us/) official website. I'll suggest getting latest version of NASM for DOS. I used NASM version 2.16.03 (2024-04-17).
+Download NASM from [https://www.nasm.us](https://www.nasm.us) official website. I'll suggest getting latest version of NASM for DOS. I used NASM version 2.16.03 (2024-04-17).
 
 * **GNU Make (DJGPP):** 
-Download Make utility from [https://www.delorie.com/djgpp/](https://www.delorie.com/djgpp/) official DJGPP website. I used version 4.4 of GNU Make (mak44b.zip).
+Download Make utility from [https://www.delorie.com/djgpp](https://www.delorie.com/djgpp/) official DJGPP website. I used version 4.4 of GNU Make (mak44b.zip).
 
-* **GNU Debugger:** 
-Download GNU Debugger (GDB) from [https://www.delorie.com/djgpp/](https://www.delorie.com/djgpp/) official DJGPP website. I used version 8.0.1 of GDB (gdb801b.zip).
+* **GNU Debugger (DJGPP):** 
+Download GNU Debugger (GDB) from [https://www.delorie.com/djgpp](https://www.delorie.com/djgpp/) official DJGPP website. I used version 8.0.1 of GDB (gdb801b.zip).
 
-## How to build?
+## Build Details
 I have added a `Makefile` in each project (directory). Use `GNU Make` (v4.4 or later) from DJGPP (or Linux build toolchain). You also need `NASM` to translate code to .COM files. Moreover, since these are .COM files, therefore, you don't need any linker. NASM can output to a .COM file. 
 
 > [!NOTE]
 > Makefile contains commands for DOS (mkdir, del, etc). `GNU Make` most likely intercept these commands and execute them correctly. However, if you are using any other operating system and `Makefile` fails then you might need to update the `Makefile`.
 
+### Build without Make
 If you don't have `Make` but you have `NASM` then you can translate any project to .COM file, for example:
 ```
 NASM -f bin -o HELLO.COM SRC/MAIN.ASM
@@ -48,4 +60,4 @@ NASM -f bin -o HELLO.COM SRC/MAIN.ASM
 There are many projects files which are probably lost forever due to corrupted copies of backup. I'll try to search and look in other backups. If I find more source code then I'll add them here.
 
 ## License
-Copyright © 1990-2025 by Farhan Ali Qureshi. View the [MIT LICENSE](LICENSE) file for details.
+Copyright © Farhan Ali Qureshi. View the [MIT LICENSE](LICENSE) file for details.
