@@ -60,4 +60,4 @@ NASM -f bin -o HELLO.COM SRC/MAIN.ASM
 There are many projects files which are probably lost forever due to corrupted copies of backup. I'll try to search and look in other backups. If I find more source code then I'll add them here.
 
 ## License
-Copyright © Farhan Ali Qureshi. View the [MIT LICENSE](LICENSE) file for details.
+Copyright © Farhan Ali Qureshi. All rights reserved. View the [MIT LICENSE](LICENSE) file for details.
